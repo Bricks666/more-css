@@ -1,0 +1,16 @@
+.column {
+	display: grid;
+
+	grid-template-rows: min-content 1fr;
+
+	column-gap: 30px;
+	justify-content: center;
+}
+
+.column--two {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.column__header {
+	grid-column: 1 / -1;
+}

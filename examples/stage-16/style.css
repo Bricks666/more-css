@@ -1,0 +1,127 @@
+body,
+p,
+h1,
+h2,
+h3,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 1440px;
+	margin: 0 auto;
+}
+
+.body {
+	font-family: "Roboto", sans-serif;
+}
+.header {
+	margin-bottom: 50px;
+	padding-top: 130px;
+	padding-bottom: 69px;
+
+	background-color: #1c1b1b;
+}
+
+.header__heading {
+	margin-left: 82px;
+	margin-bottom: 34px;
+
+	font-size: 64px;
+	color: white;
+}
+
+.header__author {
+	margin-right: 82px;
+
+	text-align: end;
+	font-size: 36px;
+	color: white;
+}
+
+.main__part {
+	margin-bottom: 38px;
+
+	text-align: center;
+	font-size: 48px;
+	font-weight: 500;
+}
+
+.chapter {
+	margin-bottom: 76px;
+}
+
+.chapter::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.chapter__name {
+	margin-bottom: 18px;
+
+	text-align: center;
+
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.chapter__photo {
+	float: left;
+
+	margin-right: 36px;
+	margin-bottom: 34px;
+}
+
+.chapter__paragraph {
+	margin-bottom: 12px;
+
+	font-size: 18px;
+}
+
+.chapter__paragraph--invert {
+	color: white;
+}
+
+.chapter__highlight {
+	margin: 48px 0;
+	padding: 50px 82px;
+
+	background-color: #1c1b1b;
+}
+
+.nav__list {
+	display: flex;
+
+	list-style: none;
+}
+
+.nav__link {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.footer {
+	display: flex;
+
+	margin-top: 72px;
+	padding: 44px 65px 200px;
+
+	background-color: #1c1b1b;
+}
+
+.footer__container {
+	display: flex;
+}
+
+.footer__copyright {
+	font-size: 18px;
+	font-weight: 500;
+	color: white;
+}
+
+.footer__contacts {
+	font-size: 18px;
+	color: white;
+}
