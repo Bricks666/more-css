@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Веб Дизайн. Эпизод 5. Да прибудет с тобой flex</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="node_modules/@shower/ribbon/styles/styles.css"
+		/>
+		<link rel="stylesheet" href="./styles/index.css" />
+	</head>
+	<body class="shower list">
+		<header class="caption">
+			<h1>Веб Дизайн. Эпизод 5. Да прибудет с тобой flex</h1>
+			<p>
+				Для староверов настали трудные времена, сейчас уже почти все браузеры
+				поддерживают flex
+			</p>
+		</header>
+		<!-- Start -->
+		<section class="slide">
+			<h2>Чуть больше красоты и flex</h2>
+			<img
+				class="image image--no-cover"
+				src="assets/flex.jpg"
+				alt="flex magazine"
+			/>
+		</section>
+		<!-- Remembering -->
+		<section class="slide column column--two">
+			<h2 class="column__header">Вспомним, что мы делали</h2>
+			<img
+				class="image image--no-cover"
+				src="./assets/Maket/Maket-1.jpg"
+				alt="Фото макета. Часть 1"
+			/>
+			<img
+				class="image image--no-cover"
+				src="./assets/Maket/Maket-2.jpg"
+				alt="Фото макета. Часть 2"
+			/>
+		</section>
+		<!-- Header -->
+		<section class="slide column column--two">
+			<h2 class="column__header">Шапка</h2>
+			<pre class="pre">
+            <code>  &lt;body&gt;</code>
+            <code>    &lt;header&gt;</code>
+            <code>      &lt;div&gt;</code>
+            <code>        &lt;h1&gt;...&lt;/h1&gt;</code>
+            <code>        &lt;p&gt;...&lt;/p&gt;</code>
+            <code>      &lt;/div&gt;</code>
+            <code>    &lt;/header&gt;</code>
+          </pre>
+			<img class="image image--no-cover" src="./assets/Maket/header.jpg" />
+		</section>
+		<!-- Content. Block1 -->
+		<section class="slide column column--two">
+			<h2 class="column__header">Певая часть основного контента</h2>
+			<pre class="pre">
+            <code>    &lt;main&gt;</code>
+            <code>      &lt;div&gt;</code>
+            <code>        &lt;h2&gt;...&lt;/h2&gt;</code>
+            <code>        &lt;h3&gt;...&lt;/h3&gt;</code>
+            <code>        &lt;section&gt;</code>
+            <code>          &lt;img&gt;</code>
+            <code>          &lt;p&gt;...&lt;/p&gt;</code>
+            <code>          ...</code>
+            <code>          &lt;p&gt;...&lt;/p&gt;</code>
+          </pre>
+			<img class="image image--no-cover" src="./assets/Maket/content-1.jpg" />
+		</section>
+		<!-- Content. Block2 -->
+		<section class="slide column column--two">
+			<h2 class="column__header">Вторая часть основного контента</h2>
+			<pre class="pre">
+            <code>        &lt;div&gt;</code>
+            <code>          &lt;p&gt;...&lt;/p&gt;</code>
+            <code>          ...</code>
+            <code>          &lt;p&gt;...&lt;/p&gt;</code>
+            <code>        &lt;/div&gt;</code>
+          </pre>
+			<img class="image image--no-cover" src="./assets/Maket/content-2.jpg" />
+		</section>
+		<!-- Content. Block3 -->
+		<section class="slide column column--two">
+			<h2 class="column__header">Третья часть основного контента</h2>
+			<pre class="pre">
+            <code>          &lt;p&gt;...&lt;/p&gt;</code>
+            <code>          ...</code>
+            <code>          &lt;p&gt;...&lt;/p&gt;</code>
+            <code>        &lt;/section&gt;</code>
+            <code>        &lt;nav&gt;</code>
+            <code>          &lt;ul&gt;</code>
+            <code>            &lt;li&gt;&lt;a&gt;...&lt;/a&gt;&lt;/li&gt;</code>
+            <code>            ...</code>
+            <code>            &lt;li&gt;&lt;a&gt;...&lt;/a&gt;&lt;/li&gt;</code>
+            <code>          &lt;/ul&gt;</code>
+            <code>        &lt;/nav&gt;</code>
+            <code>      &lt;/div&gt;</code>
+            <code>    &lt;/main&gt;</code>
+          </pre>
+			<img class="image image--no-cover" src="./assets/Maket/content-3.jpg" />
+		</section>
+		<!-- Footer -->
+		<section class="slide column column--two">
+			<h2 class="column__header">Подвал</h2>
+			<pre class="pre">
+            <code>    &lt;footer&gt;</code>
+            <code>      &lt;div&gt;</code>
+            <code>        &lt;p&gt;...&lt;/p&gt;</code>
+            <code>        ...</code>
+            <code>        &lt;p&gt;...&lt;/p&gt;</code>
+            <code>      &lt;div&gt;</code>
+            <code>    &lt;/footer&gt;</code>
+            <code>  &lt;/body&gt;</code>
+          </pre>
+			<img class="image image--no-cover" src="./assets/Maket/footer.jpg" />
+		</section>
+		<!-- What was been finished -->
+		<section class="slide">
+			<style>
+				.shout {
+					font-size: 24px;
+				}
+			</style>
+			<h2 class="shout">
+				<a href="./examples/stage-11/index.html" target="_blank"
+					>На чем мы закончили</a
+				>
+			</h2>
+		</section>
+		<!-- What is float -->
+		<section class="slide column column--two slide-with-sandbox">
+			<h2 class="column__header">Обтекаем картинку</h2>
+			<div class="code-sandbox">
+				<pre class="pre code-sandbox__pre">
+          <code class="code">.selector {</code>
+          <code class="code code-sandbox__code" data-example="float">  <span class="dropzone code-sandbox__dropzone" data-type="selector"></span><span class="dropzone code-sandbox__dropzone" data-type="value"></span></code>
+          <code class="code">}</code>
+        </pre>
+				<div class="dropzone code-sandbox__words words" data-type="all">
+					<span
+						class="draggable words__word"
+						draggable="true"
+						data-type="selector"
+						>float:</span
+					><span
+						class="draggable words__word"
+						draggable="true"
+						data-type="value"
+						>left</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>right</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>none</span
+					>
+				</div>
+			</div>
+			<div class="slide-with-sandbox__example example">
+				<style>
+					.paragraph {
+						font-size: 14px;
+						text-align: justify;
+					}
+					.photo {
+						width: 50%;
+						height: 50%;
+					}
+				</style>
+				<img
+					class="image photo"
+					src="./assets/start.webp"
+					data-name="float"
+					alt="star and marco"
+				/>
+				<p class="paragraph">
+					Принцесса-подросток из альтернативного пространственного измерения под
+					названием Мьюни, отправленная на Землю в качестве «мягкого» наказания
+					за неаккуратное использование Волшебной Палочки
+				</p>
+				<p class="paragraph">
+					Со временем она становится более собранной и серьёзной, а после массы
+					приключений возвращается обратно — на Мьюни.
+				</p>
+			</div>
+		</section>
+		<!-- Add float -->
+		<section class="slide">
+			<h2>Добавим обтекание для картинки</h2>
+			<pre class="pre">
+          <code>.chapter__photo {</code>
+          <code>  <mark>float: left;</mark></code>
+          <code>  <mark>width: 320px;</mark></code>
+          <code>  <mark>height: 479px;</mark></code>
+          <code>}</code>
+        </pre>
+		</section>
+		<!-- Hot is looks -->
+		<section class="slide slide-with-inner clear">
+			<object class="inner-site" data="./examples/stage-12/index.html"></object>
+		</section>
+		<!-- Add margin for image -->
+		<section class="slide">
+			<h2>Добавление отступов для картинки</h2>
+			<pre class="pre">
+        <code>.chapter__photo {</code>
+        <code>  float: left;</code>
+        <code>  <mark>margin-bottom: 34px;</mark></code>
+        <code>  <mark>margin-right: 36px;</mark></code>
+        <code>}</code>
+      </pre>
+		</section>
+		<!-- How it looks -->
+		<section class="slide slide-with-inner clear">
+			<object class="inner-site" data="./examples/stage-13/index.html"></object>
+		</section>
+		<!-- What is clearfix -->
+		<section class="slide column column--two slide-with-sandbox">
+			<h2>Есть проблема</h2>
+			<div class="code-sandbox">
+				<pre class="pre code-sandbox__pre">
+          <code class="code">.selector {</code>
+          <code class="code code-sandbox__code" data-example="float-clearfix">  float:<span class="dropzone code-sandbox__dropzone" data-type="value"></span></code>
+          <code class="code">}</code>
+          <code class="code">.clearfix {</code>
+          <code class="code code-sandbox__code" data-example="clearfix">  <span class="dropzone code-sandbox__dropzone" data-type="selector"></span><span class="dropzone code-sandbox__dropzone" data-type="value"></span></code>
+          <code class="code">}</code>
+        </pre>
+				<div class="dropzone code-sandbox__words words" data-type="all">
+					<span
+						class="draggable words__word"
+						draggable="true"
+						data-type="selector"
+						>clear:</span
+					><span
+						class="draggable words__word"
+						draggable="true"
+						data-type="value"
+						>left</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>right</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>left</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>right</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>both</span
+					>
+				</div>
+			</div>
+		</section>
+		<!-- Clear example -->
+		<section class="slide slide-with-sandbox">
+			<style>
+				.photo {
+					width: 33%;
+				}
+			</style>
+			<h2>Обтекаем картинку</h2>
+			<div class="slide-with-sandbox__example example">
+				<img
+					class="image photo photo--left"
+					src="./assets/start.webp"
+					data-name="float-clearfix"
+					alt="star and marco"
+				/>
+				<p class="paragraph">
+					Принцесса-подросток из альтернативного пространственного измерения под
+					названием
+				</p>
+				<div data-name="clearfix"></div>
+				<p class="paragraph">
+					Со временем она становится более собранной и серьёзной, а после массы
+					приключений возвращается обратно — на Мьюни.
+				</p>
+			</div>
+		</section>
+		<!-- Before and after -->
+		<section class="slide column column--two">
+			<h2 class="column__header">::before, ::after</h2>
+			<pre class="pre">
+        <code class="code">.selector::before {</code>
+        <code class="code"> content: "before element";</code>
+        <code class="code">}</code>
+        <code class="code">.selector::after {</code>
+        <code class="code"> content: "after element";</code>
+        <code class="code">}</code>
+      </pre>
+			<div>
+				<style>
+					.selector {
+						width: 150px;
+						height: 150px;
+
+						background-color: tomato;
+					}
+					.selector::before {
+						content: "before element";
+					}
+					.selector::after {
+						content: "after element";
+					}
+				</style>
+				<div class="selector"></div>
+			</div>
+		</section>
+		<!-- Show before example -->
+		<section class="slide column column--two">
+			<h2 class="column__header">::before, ::after</h2>
+			<pre class="pre">
+        <code class="code">.selector {</code>
+        <code class="code"> position: relative;</code>
+        <code class="code">}</code>
+
+        <code class="code">.selector::before {</code>
+        <code class="code"> content: "";</code>
+        <code class="code"> height: 10px;</code>
+        <code class="code"> width: 10px;</code>
+        <code class="code"> position: absolute;</code>
+        <code class="code"> left: -15px;</code>
+        <code class="code"> top: 50%;</code>
+        <code class="code"> background-image: linear-gradient(to bottom right, #7a7fbc, #11bc31);</code>
+        <code class="code">}</code>
+      </pre>
+			<div>
+				<style>
+					.selector2 {
+						position: relative;
+					}
+					.selector2::before {
+						content: "";
+
+						position: absolute;
+						top: 50%;
+						left: -15px;
+
+						width: 10px;
+						height: 10px;
+
+						background-image: linear-gradient(
+							to bottom right,
+							#7a7fbc,
+							#11bc31
+						);
+					}
+				</style>
+				<div class="selector2">Контент</div>
+			</div>
+		</section>
+		<!-- Add clearfix -->
+		<section class="slide">
+			<h2>Clearfix на псевдоэлементе</h2>
+			<pre class="pre">
+        <code class="code">.chapter__highlight::before {</code>
+        <code class="code"> <mark>content: "";</mark></code>
+        <code class="code"> <mark>clear: both;</mark></code>
+        <code class="code">}</code>
+      </pre>
+		</section>
+
+		<!-- How it looks -->
+		<section class="slide slide-with-inner clear">
+			<object class="inner-site" data="./examples/stage-14/index.html"></object>
+		</section>
+
+		<!-- How it looks -->
+		<section class="slide slide-with-inner clear">
+			<object class="inner-site" data="./examples/stage-15/index.html"></object>
+		</section>
+
+		<section class="slide column column--two slide-with-sandbox">
+			<h2 class="column__header">Flex</h2>
+			<div class="code-sandbox">
+				<pre class="pre code-sandbox__pre">
+          <code class="code">.selector {</code>
+          <code class="code code-sandbox__code" data-example="display">  <span class="dropzone code-sandbox__dropzone" data-type="selector"></span><span class="dropzone code-sandbox__dropzone" data-type="value"></span></code>
+          <code class="code">}</code>
+        </pre>
+				<div class="dropzone code-sandbox__words words" data-type="all">
+					<span
+						class="draggable words__word"
+						draggable="true"
+						data-type="selector"
+						>display:</span
+					><span
+						class="draggable words__word"
+						draggable="true"
+						data-type="value"
+						>inline</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>block</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>flex</span
+					>
+				</div>
+			</div>
+			<div class="slide-with-sandbox__example example">
+				<style>
+					ul li::before {
+						content: "" !important;
+					}
+				</style>
+				<ul data-name="display">
+					<li>First</li>
+					<li>Second</li>
+					<li>Third</li>
+					<li>Fourth</li>
+				</ul>
+				<span>Another inline tag</span>
+			</div>
+		</section>
+		<section class="slide">
+			<h2>Добавляем flex в проект</h2>
+			<pre class="pre">
+        <code>.nav__list {</code>
+        <code> <mark>display: flex;</mark></code>
+        <code> <mark>list-style: none;</mark></code>
+        <code>}</code>
+        <code>.footer__container {</code>
+        <code> <mark>display: flex;</mark></code>
+        <code>}</code>
+      </pre>
+		</section>
+
+		<!-- How it looks -->
+		<section class="slide slide-with-inner clear">
+			<object class="inner-site" data="./examples/stage-16/index.html"></object>
+		</section>
+
+		<section class="slide column column--two slide-with-sandbox">
+			<h2 class="column__header">Выравнивание элементов</h2>
+			<div class="code-sandbox">
+				<pre class="pre code-sandbox__pre">
+          <code class="code">.selector {</code>
+          <code class="code code-sandbox__code" data-example="justify-content">  <span class="dropzone code-sandbox__dropzone" data-type="selector"></span><span class="dropzone code-sandbox__dropzone" data-type="value"></span></code>
+          <code class="code">}</code>
+        </pre>
+				<div class="dropzone code-sandbox__words words" data-type="all">
+					<span
+						class="draggable words__word"
+						draggable="true"
+						data-type="selector"
+						>justify-content:</span
+					><span
+						class="draggable words__word"
+						draggable="true"
+						data-type="value"
+						>flex-end</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>flex-start</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>space-around</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>space-between</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>space-evenly</span
+					>
+				</div>
+			</div>
+			<div class="slide-with-sandbox__example example">
+				<style>
+					.justify-content {
+						display: flex;
+
+						width: 100%;
+						height: 100%;
+
+						background-color: chocolate;
+					}
+					.justify-content > * {
+						width: 20%;
+						height: 50px;
+
+						background-color: aqua;
+					}
+				</style>
+				<div class="justify-content" data-name="justify-content">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</section>
+		<section class="slide column column--two">
+			<h2 class="column__header">Добавляем пробелы в flex</h2>
+			<pre class="pre">
+        <code>.nav__list {</code>
+        <code>  display: flex;</code>
+        <code>  list-type: none;</code>
+        <code>  <mark>width: 806px;</mark></code>
+        <code>  <mark>justify-content: space-between;</mark></code>
+        <code>  <mark>margin: 0 auto;</mark></code>
+        <code>}</code>
+        <code>.footer__container {</code>
+        <code>  display: flex;</code>
+        <code>  <mark>justify-content: space-between;</mark></code>
+        <code>}</code>
+      </pre>
+			<pre class="pre">
+        <code>.footer__container {</code>
+        <code>  display: flex;</code>
+        <code>  <mark>justify-content: space-between;</mark></code>
+        <code>}</code>
+        <code>.footer__contacts {</code>
+        <code>  font-size: 18px;</code>
+        <code>  color: white;</code>
+        <code>  <mark>width: 336px;</mark></code>
+        <code>}</code>
+      </pre>
+		</section>
+
+		<!-- How it looks -->
+		<section class="slide slide-with-inner clear">
+			<object class="inner-site" data="./examples/stage-17/index.html"></object>
+		</section>
+
+		<section class="slide column column--two slide-with-sandbox">
+			<h2 class="column__header">Border</h2>
+			<div class="code-sandbox">
+				<pre class="pre code-sandbox__pre">
+          <code class="code">.selector {</code>
+          <code class="code code-sandbox__code" data-example="border">  border:<span class="dropzone code-sandbox__dropzone" data-type="value"></span></code>
+          <code class="code">}</code>
+        </pre>
+				<div class="dropzone code-sandbox__words words" data-type="all">
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>4px</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>10</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>solid</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>dotted</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>dashed</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>double</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>tomato</span
+					>
+				</div>
+			</div>
+			<div class="slide-with-sandbox__example example">
+				<style>
+					.border {
+						width: 150px;
+						height: 150px;
+
+						background-color: black;
+					}
+				</style>
+				<div class="border" data-name="border"></div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Добавляем рамку для навигационных ссылок</h2>
+			<pre class="pre">
+        <code>.nav__item {</code>
+        <code>  <mark>border: 4px solid #1c1b1b;</mark></code>
+        <code>}</code>
+      </pre>
+		</section>
+
+		<!-- How it looks -->
+		<section class="slide slide-with-inner clear">
+			<object class="inner-site" data="./examples/stage-18/index.html"></object>
+		</section>
+
+		<section class="slide">
+			<h2>Задаем размеры страницам в навигации</h2>
+			<pre class="pre">
+        <code>.nav__link {</code>
+        <code>  font-size: 24px;</code>
+        <code>  font-weight: 700;</code>
+        <code>  <mark>width: 50px;</mark></code>
+        <code>  <mark>height: 50px;</mark></code>
+        <code>}</code>
+      </pre>
+		</section>
+
+		<!-- How it looks -->
+		<section class="slide slide-with-inner clear">
+			<object class="inner-site" data="./examples/stage-19/index.html"></object>
+		</section>
+
+		<section class="slide">
+			<h2>Меняем дисплей</h2>
+			<pre class="pre">
+        <code>.nav__link {</code>
+        <code>  font-size: 24px;</code>
+        <code>  font-weight: 700;</code>
+        <code>  width: 50px;</code>
+        <code>  height: 50px;</code>
+        <code>  <mark>display: flex;</mark></code>
+        <code>}</code>
+      </pre>
+		</section>
+
+		<!-- How it looks -->
+		<section class="slide slide-with-inner clear">
+			<object class="inner-site" data="./examples/stage-20/index.html"></object>
+		</section>
+		<!-- Align items -->
+		<section class="slide column column--two slide-with-sandbox">
+			<h2 class="column__header">Выравнивание элементов</h2>
+			<div class="code-sandbox">
+				<pre class="pre code-sandbox__pre">
+          <code class="code">.selector {</code>
+          <code class="code code-sandbox__code" data-example="align-items">  <span class="dropzone code-sandbox__dropzone" data-type="selector"></span><span class="dropzone code-sandbox__dropzone" data-type="value"></span></code>
+          <code class="code">}</code>
+        </pre>
+				<div class="dropzone code-sandbox__words words" data-type="all">
+					<span
+						class="draggable words__word"
+						draggable="true"
+						data-type="selector"
+						>align-items:</span
+					><span
+						class="draggable words__word"
+						draggable="true"
+						data-type="value"
+						>flex-end</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>flex-start</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>center</span
+					>
+					<span class="draggable words__word" draggable="true" data-type="value"
+						>stretch</span
+					>
+				</div>
+			</div>
+			<div class="slide-with-sandbox__example example">
+				<style>
+					.justify-content {
+						display: flex;
+
+						width: 100%;
+						height: 100%;
+
+						background-color: chocolate;
+					}
+					.justify-content > * {
+						width: 20%;
+						height: 50px;
+
+						background-color: aqua;
+					}
+				</style>
+				<div class="justify-content" data-name="align-items">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Выравниваем номера</h2>
+			<pre class="pre">
+        <code>.nav__link {</code>
+        <code>  font-size: 24px;</code>
+        <code>  font-weight: 700;</code>
+        <code>  width: 50px;</code>
+        <code>  height: 50px;</code>
+        <code>  display: flex;</code>
+        <code>  <mark>justify-content: center;</mark></code>
+        <code>  <mark>align-items: center;</mark></code>
+        <code>}</code>
+      </pre>
+		</section>
+
+		<!-- How it looks -->
+		<section class="slide slide-with-inner clear">
+			<object class="inner-site" data="./examples/stage-21/index.html"></object>
+		</section>
+
+		<section class="slide">
+			<h2>Последний штрих</h2>
+			<pre class="pre">
+        <code>.nav__link--current {</code>
+        <code>  background-color: #1c1b1b</code>
+        <code>  color: white;</code>
+        <code>}</code>
+      </pre>
+		</section>
+
+		<!-- How it looks -->
+		<section class="slide slide-with-inner clear">
+			<object class="inner-site" data="./examples/stage-22/index.html"></object>
+		</section>
+
+		<section class="slide">
+			<h2>Усе!</h2>
+			<ul>
+				<li><a href="./examples/stage-22/index.html">Итоговая страница</a></li>
+				<li>
+					<a href="https://goo.su/9fY5">Презентация(https://goo.su/9fY5)</a>
+				</li>
+				<li>
+					<a href="https://goo.su/9Sxq">Код презентации(https://goo.su/9Sxq)</a>
+				</li>
+				<li>
+					<a href="https://goo.su/askL"
+						>Статья по flex'ам(https://goo.su/askL)</a
+					>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2 class="shout">Вопросы?</h2>
+		</section>
+
+		<div class="progress"></div>
+
+		<script src="node_modules/@shower/core/dist/shower.js"></script>
+		<script src="./js/Draggable.js"></script>
+		<script src="./js/Dropzone.js"></script>
+		<script src="./js/CodeChange.js"></script>
+		<script src="./js/DND.js"></script>
+	</body>
+</html>
