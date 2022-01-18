@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link
 			rel="stylesheet"
-			href="shower/themes/ribbon/styles/styles.css"
+			href="node_modules/@shower/ribbon/styles/styles.css"
 		/>
 		<link rel="stylesheet" href="./styles/index.css" />
 	</head>
@@ -106,7 +106,7 @@
 		<!-- Footer -->
 		<section class="slide column column--two">
 			<h2 class="column__header">Подвал</h2>
-			<pre class="pre">
+			<pre class="pre" style="grid-row: span 2">
             <code>    &lt;footer&gt;</code>
             <code>      &lt;div&gt;</code>
             <code>        &lt;p&gt;...&lt;/p&gt;</code>
@@ -117,6 +117,7 @@
             <code>  &lt;/body&gt;</code>
           </pre>
 			<img class="image image--no-cover" src="./assets/Maket/footer.jpg" />
+			<img class="image image--no-cover" src="./assets/footer.jpg" />
 		</section>
 		<!-- What was been finished -->
 		<section class="slide">
@@ -132,6 +133,15 @@
 			</h2>
 		</section>
 		<!-- What is float -->
+		<section class="slide">
+			<h2>Ну что? Обтекание?</h2>
+			<img
+				class="image image--no-cover"
+				src="./assets/float.jpg"
+				alt="Модель курицы в 3D Max"
+			/>
+		</section>
+		<!-- Float -->
 		<section class="slide column column--two slide-with-sandbox">
 			<h2 class="column__header">Обтекаем картинку</h2>
 			<div class="code-sandbox">
@@ -264,7 +274,7 @@
 					width: 33%;
 				}
 			</style>
-			<h2>Обтекаем картинку</h2>
+			<h2>Чистота</h2>
 			<div class="slide-with-sandbox__example example">
 				<img
 					class="image photo photo--left"
@@ -282,6 +292,9 @@
 					приключений возвращается обратно — на Мьюни.
 				</p>
 			</div>
+		</section>
+		<section class="slide">
+			<img class="image image--no-cover" src="./assets/nothing.jpg" />
 		</section>
 		<!-- Before and after -->
 		<section class="slide column column--two">
@@ -355,11 +368,14 @@
 				<div class="selector2">Контент</div>
 			</div>
 		</section>
+		<section class="slide">
+			<img class="image image--no-cover" src="./assets/fakelements.jpg" />
+		</section>
 		<!-- Add clearfix -->
 		<section class="slide">
-			<h2>Clearfix на псевдоэлементе</h2>
+			<h2>Clearfix на псевдоэлемент</h2>
 			<pre class="pre">
-        <code class="code">.chapter__highlight::before {</code>
+        <code class="code">.chapter::after {</code>
         <code class="code"> <mark>content: "";</mark></code>
         <code class="code"> <mark>clear: both;</mark></code>
         <code class="code">}</code>
@@ -572,13 +588,14 @@
 			</div>
 		</section>
 
-		<section class="slide">
-			<h2>Добавляем рамку для навигационных ссылок</h2>
+		<section class="slide column column--two">
+			<h2 class="column__header">Добавляем рамку для навигационных ссылок</h2>
 			<pre class="pre">
         <code>.nav__item {</code>
         <code>  <mark>border: 4px solid #1c1b1b;</mark></code>
         <code>}</code>
       </pre>
+			<img class="image" src="./assets/border.jpg" />
 		</section>
 
 		<!-- How it looks -->
@@ -696,7 +713,9 @@
 		<section class="slide slide-with-inner clear">
 			<object class="inner-site" data="./examples/stage-21/index.html"></object>
 		</section>
-
+		<section class="slide">
+			<img class="image image--no-cover" src="assets/i-ve-finsihed.jpg" />
+		</section>
 		<section class="slide">
 			<h2>Последний штрих</h2>
 			<pre class="pre">
@@ -731,7 +750,8 @@
 		</section>
 
 		<section class="slide">
-			<h2 class="shout">Вопросы?</h2>
+			<h2>Вопросы?</h2>
+			<img src="./assets/answer-pleasse.jpg" alt="Жду вопросы" />
 		</section>
 
 		<div class="progress"></div>
